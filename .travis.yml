@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t docker_travis -f ./Dockerfile.dev .
+  - docker build -t docker_travis -f ./Dockerfile .
 
 script:
   - docker run -e CI=true docker_travis npm run test
